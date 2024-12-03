@@ -1,0 +1,67 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport mode="over" opened="false">
+    <mat-toolbar>Study Set</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink='/study/1' [activated]="content.id == 1">CS487 Design Report</a>
+      <a mat-list-item routerLink='/study/2' [activated]="content.id == 2">ECE218 Midterm 2</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+  <div class="outer">
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Study Session</span>
+    </mat-toolbar>
+    <div class="content">
+      <div class="horiz-flex">
+        <div class="vert-flex">
+          <mat-card class="desc">
+            <mat-card-header><mat-card-title>{{content.name}}</mat-card-title></mat-card-header>
+            <mat-card-content><div [innerHTML]="content.desc"></div></mat-card-content>
+          </mat-card>
+          <mat-card class="yres">
+            <mat-card-header><mat-card-title>Resources Resources</mat-card-title></mat-card-header>
+            <mat-card-content>
+              <mat-selection-list>
+                @for (res of content.yres; track res) {
+                  <a mat-list-item href="javascript:void">{{res}}</a>
+                }
+              </mat-selection-list>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="vert-flex">
+          <mat-card class="rres">
+            <mat-card-header><mat-card-title>Recommended Resources</mat-card-title></mat-card-header>
+            <mat-card-content>
+              <mat-selection-list>
+                @for (res of content.rres; track res) {
+                  <a mat-list-item href="javascript:void">{{res}}</a>
+                }
+              </mat-selection-list>
+            </mat-card-content>
+          </mat-card>
+          <div class="progress-widget">
+            <div class="progress-text">Progress:</div>
+            <mat-form-field class="example-form-field" style="width: 5em;font: var(--mat-sys-display-small); margin: 10px">
+              <input matInput type="text" [(ngModel)]="content.progress" style="text-align: right;">
+              <span matTextSuffix>%</span>
+            </mat-form-field>
+            @if (content.id != 2) {
+              <a mat-flat-button [routerLink]="['..', content.id+1]">Next</a>
+            } @else {
+              <a mat-flat-button routerLink="/dashboard">Next</a>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+.wrapper-outer {
+    
+}
+
+.wrapper-inner {
+    width: min-content;
+}
+.month {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 24px;
+    line-height: 1lh;
+    text-align: center;
+}
+
+.day {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dayOfWeek {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 30px;
+    text-align: center;
+}

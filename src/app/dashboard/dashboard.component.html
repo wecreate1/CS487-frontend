@@ -1,0 +1,52 @@
+<div class="dash-outer">
+
+<mat-toolbar>
+    <div class="toolbar-title">Dashboard</div>
+    <button mat-stroked-button href="javascript:void"><mat-icon>add</mat-icon>Add Item</button>
+    <button mat-stroked-button href="javascript:void">Switch to Detailed View</button>
+    <div class="spacer"></div>
+    <a mat-flat-button routerLink="/startStudy">Study Now</a>
+    <button mat-icon-button><mat-icon>settings</mat-icon></button>
+</mat-toolbar>
+<mat-grid-list cols="3" class="dash" rowHeight="fit">
+    <mat-grid-tile colspan="2" rowspan="2">
+        <div class="dash-summary">
+            <app-date class="dash-date" dayOfWeek="TUE" day="29" month="OCT"/>
+            <div class="dash-encourage">You're doing great in ECE218! Start working on the next lab report next study time.</div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="2">
+        <div class="countdown">
+            <div class="countdown-title">Next Study Time in</div>
+            <div class="countdown-time">32 min</div>
+            <a mat-button class="countdown-link" href="javascript:void">Edit Schedule</a>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+        <div class="dash-comment">
+            Next Study Time planned in 30 minutes, see you there!
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
+        <div style="display: flex; height: 100%; flex-direction: column; width: 100%;">
+        <h1>Upcoming Assignments</h1>
+        <mat-list style="flex-grow: 1;">
+            <mat-list-item>
+                <span matListItemTitle>CS487 Design Report</span>
+                <span matListItemMeta>TUE 10/28</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span matListItemTitle>CS450 PA2</span>
+                <span matListItemMeta>FRI 11/8</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span matListItemTitle>ECE218 Midterm 2</span>
+                <span matListItemMeta>WED 11/13</span>
+            </mat-list-item>
+        </mat-list>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+</div>

@@ -1,0 +1,73 @@
+
+.dash-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dash {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: visible;
+    flex-grow: 1;
+    
+}
+
+.dash-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.dash-comment {
+    flex: 1;
+    align-self: flex-start;
+    font: var(--mat-sys-headline-small);
+}
+
+.dash-date {
+    width: 100px;
+}
+
+.dash-encourage {
+    flex: 4;
+    font: var(--mat-sys-headline-small);
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-title {
+    font: var(--mat-sys-headline-medium);
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.countdown-time {
+    font: var(--mat-sys-display-medium);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.countdown-link {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+.toolbar-title {
+    margin-right: 16px;
+}
+
+.spacer {
+    flex: 1;
+}

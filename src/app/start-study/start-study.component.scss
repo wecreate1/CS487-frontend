@@ -1,0 +1,48 @@
+
+  
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+
+.outer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    overflow: visible;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    align-self: center;
+}
+
+.list-set {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.assignments-container {
+    flex: 1;
+    margin: 5px;
+}
+
+.assignments-list {
+    height: 100%;
+}
+
+.study-button {
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.spacer {
+    flex: 1;
+}
